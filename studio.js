@@ -58,9 +58,6 @@ function render() {
 function navigate() {
   search.value = '';
   render();
-  if (Object.hasOwn(views, location.hash.slice(1))) {
-    document.querySelector('#section-title').focus();
-  }
 }
 
 search.addEventListener('input', render);

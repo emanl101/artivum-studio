@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Artivum Studio</title>
-<link rel="stylesheet" href="style.css?v=2">
-<script src="studio.js" defer></script>
+<link rel="stylesheet" href="style.css?v=7">
+<script src="studio.js?v=2" defer></script>
 </head>
 <body>
 <div class="studio-intro" hidden aria-hidden="true">
@@ -16,13 +16,13 @@
 </div>
 <header>
   <a class="brand" href="#uebersicht"><img src="artivum-studio-logo.png" alt="Artivum Studio" width="1920" height="204"></a>
-  <nav aria-label="Dashboard">
+  <nav class="desktop-nav" aria-label="Dashboard">
     <a href="#uebersicht">Übersicht</a><a href="#websites">Websites</a><a href="#zahlungen">Zahlungen</a><a href="#domains">Domains</a>
   </nav>
   <span class="demo">Demo</span>
 </header>
 <main>
-  <section id="uebersicht" aria-labelledby="title">
+  <section aria-labelledby="title">
     <h1 id="title">Studio-Übersicht</h1>
     <p class="intro">Websites, Zahlungen und Domains auf einen Blick.</p>
     <div class="overview">
@@ -33,6 +33,9 @@
         <small>Letzter Termin zum Stoppen der Verlängerung</small>
       </a>
       <div class="metrics" id="metrics"></div>
+      <nav class="mobile-nav" aria-label="Dashboard">
+        <a href="#uebersicht">Übersicht</a><a href="#websites">Websites</a><a href="#zahlungen">Zahlungen</a><a href="#domains">Domains</a>
+      </nav>
     </div>
   </section>
   <section class="portfolio" aria-labelledby="section-title">
