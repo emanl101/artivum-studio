@@ -1,0 +1,74 @@
+:root {
+  color-scheme: light;
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  color: #192225;
+  background: #f7f6f2;
+  --muted: #515a5d;
+  --line: #e4e5e0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 12% 17%, #f3dcad 0, transparent 36%),
+              radial-gradient(ellipse at 75% 8%, #ddebed 0, transparent 40%);
+}
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 3px solid #326e8a; outline-offset: 4px; }
+header, main, footer { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+header, .section-heading, .feature-top, footer {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+header { min-height: 100px; flex-wrap: wrap; }
+.brand { display: block; width: clamp(180px, 25vw, 260px); mix-blend-mode: multiply; }
+.brand img { display: block; width: 100%; height: auto; }
+.circle { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; }
+nav { display: flex; flex-wrap: wrap; gap: 3px; padding: 5px; border: 1px solid #fff; border-radius: 32px; background: #ffffff85; backdrop-filter: blur(18px); }
+nav a, .demo { padding: 9px 15px; border-radius: 24px; font-size: .86rem; }
+nav a[aria-current] { background: #192225; color: white; }
+.demo { border: 1px solid #b6bdb9; color: var(--muted); }
+h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); margin: 36px 0 0; letter-spacing: -.075em; line-height: 1; }
+.intro, .section-heading p { color: var(--muted); }
+.overview { display: grid; grid-template-columns: 1fr 1.5fr; gap: 14px; margin-top: 30px; }
+.feature {
+  border-radius: 38px; padding: 26px; color: white; display: flex; flex-direction: column;
+  border: 1px solid #ffffff80;
+  background: radial-gradient(ellipse at 0% 100%, #886040 0, transparent 70%),
+              radial-gradient(ellipse at 100% 0%, #4b7485 0, transparent 72%), #263741;
+  box-shadow: inset 0 1px 14px #ffffff33, 0 16px 35px #273d4625;
+}
+.feature strong { font-size: clamp(3rem, 6vw, 4.8rem); line-height: 1; letter-spacing: -.065em; margin: auto 0 8px; padding-top: 30px; }
+.feature small { margin-top: 8px; color: #f3e9df; }
+.circle { border: 1px solid #ffffff80; flex-shrink: 0; }
+.metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.metric { border-radius: 30px; background: #ffffffde; border: 1px solid white; padding: 20px 23px; min-height: 126px; display: grid; align-content: space-between; gap: 12px; }
+.metric:hover, .feature:hover { box-shadow: 0 12px 28px #24393f26; }
+.metric strong { font-size: 2.4rem; letter-spacing: -.065em; line-height: 1; }
+.portfolio { margin-top: 32px; padding: 25px; background: #fff; border-radius: 32px; border: 1px solid var(--line); }
+h2 { margin: 0; font-size: 1.65rem; letter-spacing: -.045em; }
+.section-heading { margin-bottom: 14px; flex-wrap: wrap; }
+.section-heading p { margin: 5px 0; }
+input { font: inherit; width: 100%; border-radius: 24px; border: 1px solid var(--line); background: #f7f7f4; padding: 10px 16px; color: inherit; }
+.record { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 14px; align-items: center; border-top: 1px solid var(--line); padding: 14px 0; }
+.record > div { min-width: 0; }
+.record small { display: block; margin-top: 4px; color: var(--muted); overflow-wrap: anywhere; }
+.labels { color: var(--muted); font-size: .83rem; }
+.tag { display: inline-block; border-radius: 20px; padding: 5px 10px; background: #eff0ee; font-size: .85rem; }
+.good { background: #e8f4ed; color: #20563e; }
+.warn { background: #fbecd4; color: #763f08; }
+.bad { background: #f7e5e3; color: #8a342e; }
+footer { padding-block: 24px; color: var(--muted); font-size: .83rem; flex-wrap: wrap; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@media (max-width: 740px) {
+  header { padding-block: 16px; }
+  nav { order: 3; }
+  .overview { grid-template-columns: 1fr; }
+  .record { grid-template-columns: 1fr 1fr; }
+  .record.labels { display: none; }
+}
+@media (max-width: 395px) {
+  header, main, footer { width: calc(100% - 24px); }
+  nav a { padding-inline: 9px; }
+  .portfolio { padding: 16px; }
+  .metric { padding: 14px; }
+}
